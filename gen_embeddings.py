@@ -16,7 +16,7 @@ if __name__ == '__main__':
     results = []
     for name in names:
         print('processing ' + name)
-        alias = name.split()[0]
+        alias = name.split('.')[0]
         filename = os.path.join('data', name)
         image_inputs = np.empty((1, img_size, img_size, 3), dtype=np.float32)
         image_bgr = cv.imread(filename)
